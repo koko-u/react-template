@@ -1,0 +1,29 @@
+{
+    "compilerOptions": {
+        "target": "ES5",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "esModuleInterop": true,
+        "lib": [
+            "es6",
+            "dom",
+            "dom.iterable"
+        ],
+        "sourceMap": true,
+        "jsx": "react",
+        "strict": true,
+        "noImplicitReturns": true,
+        "noImplicitAny": true,
+        "noImplicitThis": true,
+        "noImplicitUseStrict": true,
+        "rootDir": "src",
+        "outDir": "dist"
+    },
+    "include": [
+        "**/*.ts",
+        "**/*.tsx"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}
