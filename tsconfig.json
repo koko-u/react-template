@@ -15,7 +15,6 @@
         "noImplicitReturns": true,
         "noImplicitAny": true,
         "noImplicitThis": true,
-        "noImplicitUseStrict": true,
         "rootDir": "src",
         "outDir": "dist"
     },
