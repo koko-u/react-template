@@ -1,6 +1,7 @@
 import React from "react";
 import Greeting from "./Greeting";
 import Card, { ICardContent } from "./Card";
+import NumberCard from "./NumberCard";
 
 const contents: ICardContent[] = [
     {
@@ -24,11 +25,15 @@ const MainContainer: React.FunctionComponent = () => {
 
             <div className="container">
                 <div className="row">
-                    {contents.map(content => (
-                        <Card content={content} />
+                    {contents.map((content, index) => (
+                        <Card key={index} content={content} />
                     ))}
                 </div>
-
+                <div className="row">
+                    <div className="col">
+                        <NumberCard />
+                    </div>
+                </div>
                 <hr />
             </div>
         </main>

@@ -16,7 +16,8 @@ const Card: React.FunctionComponent<IProp> = ({ content }: IProp) => {
             <p>{content.description}</p>
             <p>
                 <a className="btn btn-secondary" href="#" role="button">
-                    View details &raquo;
+                    <i className="far fa-eye" />
+                    <span className="ml-1">View details</span>
                 </a>
             </p>
         </div>
