@@ -1,11 +1,18 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import Greeting from "../../src/components/Greeting";
 
-describe("Greeting", () => {
-    it("Display \"Hellow World\"", () => {
-        const container = document.createElement("div");
-        ReactDOM.render(<Greeting />, container);
-        expect(container.textContent).toMatch("Hello, world");
+import {mount, ReactWrapper} from "enzyme";
+import {act} from "react-dom/test-utils";
+
+describe("Greeting Component", () => {
+    let greeting: ReactWrapper;
+
+    act(() => {
+        greeting = mount(<Greeting />);
+    })
+
+    it("Display \"Hello World\"", () => {
+
+        expect(greeting.find("h1").text()).toBe("Hello, world!");
     });
 });
