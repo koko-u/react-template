@@ -12,10 +12,10 @@
         "@typescript-eslint",
         "react"
     ],
-    "env": { 
+    "env": {
         "browser": true,
-        "node": true, 
-        "es6": true 
+        "node": true,
+        "es6": true
     },
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
@@ -29,17 +29,30 @@
     "rules": {
         "prettier/prettier": "off",
         "indent": "off",
-        "@typescript-eslint/indent": ["error", 4],
-        "@typescript-eslint/interface-name-prefix": [
+        "@typescript-eslint/indent": [
+            "error",
+            4
+        ],
+        "@typescript-eslint/naming-convention": [
             "error",
             {
-                "prefixWithI": "always",
-                "allowUnderscorePrefix": true
+                "selector": "interface",
+                "format": ["PascalCase"],
+                "custom": {
+                    "regex": "^I[A-Z]",
+                    "match": true
+                }
             }
         ],
-        "eol-last": ["error", "always"],
+        "eol-last": [
+            "error",
+            "always"
+        ],
         "no-var": "error",
-        "object-shorthand": ["error", "methods"],
+        "object-shorthand": [
+            "error",
+            "methods"
+        ],
         "prefer-const": "error",
         "prefer-spread": "error",
         "require-yield": "error",

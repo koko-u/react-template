@@ -14,9 +14,6 @@ export const initCountState: ICountState = {
 export interface IRootState {
     count: ICountState;
 }
-export const initRootState: IRootState = {
-    count: initCountState
-};
 
 const rootStore: Store<IRootState, CountAction> = createStore(combineReducers<IRootState, CountAction>({
     count: countReducer
